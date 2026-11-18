@@ -1,0 +1,6 @@
+version:Release 11.6
+version:code:80
+log_md:true
+dl_link:example.com
+update_log:"> 请加Q群获取详细信息
+使用**DeepSeek Demo**开发，更像App"
