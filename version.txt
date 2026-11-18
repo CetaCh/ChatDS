@@ -1,6 +1,6 @@
-version:Release 11.7
-version:code:81
+version:Release 12.3
+version:code:86
 log_md:true
-dl_link:https://gh-proxy.org/https://github.com/CetaCh/ChatDS/releases/download/v11.7/ChatDS-11.7.apk
+dl_link:https://gh-proxy.org/https://github.com/CetaCh/ChatDS/releases/download/v12.3/ChatDS-12.3.apk
 update_log:"> 请加Q群获取详细信息
-修复朗读不可用问题"
+添加第三方提供商功能，修复了已知问题"
