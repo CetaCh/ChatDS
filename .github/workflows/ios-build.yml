@@ -1,7 +1,8 @@
 name: 构建 DSFC iOS 版（生成可自签的 ipa）
 
-# 用法：上传到自己的 GitHub 仓库后，在 Actions 页面点「Run workflow」；
-# 跑完在本次运行的 Artifacts 里下载 DSFC-unsigned.ipa，交给爱思助手 / AltStore 自签安装。
+# 用法：改完推送后会自动构建；也可以在本页点右上角 Run workflow 手动触发。
+# 跑完在本次运行的 Artifacts 里下载 DSFC-unsigned-ipa.zip，解压得到 DSFC.ipa，
+# 交给爱思助手 / AltStore / Sideloadly 用自己的 Apple ID 自签后安装。
 # 不需要 Mac，也不需要开发者账号。
 
 on:
@@ -13,18 +14,28 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    # 用最通用的 macOS 镜像。之前用 macos-14 报过：
+    # The configuration 'macos-14-arm64-us-default' is not supported
+    # 若本行仍报同样的错，改成 macos-15-intel（Intel x64 镜像）。
+    runs-on: macos-15
     timeout-minutes: 30
     steps:
       - name: 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: 选定 Xcode 版本
+      - name: 显示可用镜像与 Xcode
+        run: |
+          sw_vers
+          xcodebuild -version
+          ls /Applications | grep -i "^Xcode" || true
+
+      - name: 选定 Xcode 15（SDK 版本固定，两个镜像上都有）
         run: |
           set -e
-          for v in 15.4 15.2 15.0.1 15.0 14.3.1; do
+          for v in 15.4 15.2 15.0.1 15.0; do
             if [ -d "/Applications/Xcode_${v}.app" ]; then
               sudo xcode-select -s "/Applications/Xcode_${v}.app/Contents/Developer"
+              echo "使用 Xcode ${v}"
               break
             fi
           done
@@ -41,7 +52,9 @@ jobs:
                      CODE_SIGNING_ALLOWED=NO \
                      CODE_SIGNING_REQUIRED=NO \
                      CODE_SIGN_IDENTITY="" \
-                     build | tee xcodebuild.log | tail -n 40
+                     build 2>&1 | tee xcodebuild.log | grep -E "error:|warning: .*DSFC|BUILD (SUCCEEDED|FAILED)" || true
+          tail -n 30 xcodebuild.log
+          grep -q "BUILD SUCCEEDED" xcodebuild.log
 
       - name: 打包 ipa
         run: |
@@ -53,10 +66,10 @@ jobs:
           set -e
           ls -lh ios/dist/
           unzip -l ios/dist/DSFC.ipa | head -n 5
-          unzip -l ios/dist/DSFC.ipa | grep -E "Payload/DSFC.app/DSFC$" || (echo "包内缺少可执行文件" && exit 1)
+          unzip -l ios/dist/DSFC.ipa | grep -E "Payload/DSFC\.app/DSFC$" || (echo "包内缺少可执行文件" && exit 1)
 
       - name: 上传 ipa
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: DSFC-unsigned-ipa
           path: ios/dist/DSFC.ipa
@@ -64,7 +77,7 @@ jobs:
 
       - name: 保留编译日志
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: xcodebuild-log
           path: xcodebuild.log
