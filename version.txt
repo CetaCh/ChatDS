@@ -1,8 +1,8 @@
-version:Release 15.5
-version:code:112
+version:Release 15.4
+version:code:110
 log_md:true
 dl_link:https://gh-proxy.org/https://github.com/CetaCh/ChatDS/releases/download/v15.5/ChatDS-15.5.apk
-update_log:"# ChatDS 15.5 更新说明
+update_log:"# ChatDS 15.4 更新说明
 
 ## 重要修复
 
