@@ -1,0 +1,71 @@
+name: 构建 DSFC iOS 版（生成可自签的 ipa）
+
+# 用法：上传到自己的 GitHub 仓库后，在 Actions 页面点「Run workflow」；
+# 跑完在本次运行的 Artifacts 里下载 DSFC-unsigned.ipa，交给爱思助手 / AltStore 自签安装。
+# 不需要 Mac，也不需要开发者账号。
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "ios/**"
+      - ".github/workflows/ios-build.yml"
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 30
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 选定 Xcode 版本
+        run: |
+          set -e
+          for v in 15.4 15.2 15.0.1 15.0 14.3.1; do
+            if [ -d "/Applications/Xcode_${v}.app" ]; then
+              sudo xcode-select -s "/Applications/Xcode_${v}.app/Contents/Developer"
+              break
+            fi
+          done
+          xcodebuild -version
+
+      - name: 编译（不签名）
+        run: |
+          set -e
+          xcodebuild -project ios/DSFC.xcodeproj \
+                     -scheme DSFC \
+                     -configuration Release \
+                     -sdk iphoneos \
+                     -derivedDataPath build \
+                     CODE_SIGNING_ALLOWED=NO \
+                     CODE_SIGNING_REQUIRED=NO \
+                     CODE_SIGN_IDENTITY="" \
+                     build | tee xcodebuild.log | tail -n 40
+
+      - name: 打包 ipa
+        run: |
+          set -e
+          python3 ios/package_ipa.py --app build/Build/Products/Release-iphoneos/DSFC.app
+
+      - name: 检查产物
+        run: |
+          set -e
+          ls -lh ios/dist/
+          unzip -l ios/dist/DSFC.ipa | head -n 5
+          unzip -l ios/dist/DSFC.ipa | grep -E "Payload/DSFC.app/DSFC$" || (echo "包内缺少可执行文件" && exit 1)
+
+      - name: 上传 ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: DSFC-unsigned-ipa
+          path: ios/dist/DSFC.ipa
+          if-no-files-found: error
+
+      - name: 保留编译日志
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcodebuild-log
+          path: xcodebuild.log
+          if-no-files-found: ignore
