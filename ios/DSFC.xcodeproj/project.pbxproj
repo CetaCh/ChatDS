@@ -68,6 +68,7 @@
 				61960A60D60E4E18989CAF09 /* Info.plist */,
 			);
 			name = DSFC;
+			path = DSFC;
 			sourceTree = "<group>";
 		};
 		61960A60D60E4E18989CAD42 /* Products */ = {
