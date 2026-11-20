@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61960A60D60E4E18989CAD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF01 /* AppDelegate.swift */; };
+		61960A60D60E4E18989CAD02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF02 /* SceneDelegate.swift */; };
+		61960A60D60E4E18989CAD03 /* RouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF03 /* RouterViewController.swift */; };
+		61960A60D60E4E18989CAD04 /* WebShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF04 /* WebShell.swift */; };
+		61960A60D60E4E18989CAD05 /* JSAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF05 /* JSAPI.swift */; };
+		61960A60D60E4E18989CAD06 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF06 /* Bridge.swift */; };
+		61960A60D60E4E18989CAD07 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF07 /* Net.swift */; };
+		61960A60D60E4E18989CAD08 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF08 /* DownloadManager.swift */; };
+		61960A60D60E4E18989CAD0A /* www in Resources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF0A /* www */; };
+		61960A60D60E4E18989CAD0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61960A60D60E4E18989CAF0B /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		61960A60D60E4E18989CAF01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF03 /* RouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterViewController.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF04 /* WebShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebShell.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF05 /* JSAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSAPI.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF06 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF07 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF08 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF0A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61960A60D60E4E18989CAF20 /* DSFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61960A60D60E4E18989CAD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61960A60D60E4E18989CAD40 = {
+			isa = PBXGroup;
+			children = (
+				61960A60D60E4E18989CAD41 /* DSFC */,
+				61960A60D60E4E18989CAD42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61960A60D60E4E18989CAD41 /* DSFC */ = {
+			isa = PBXGroup;
+			children = (
+				61960A60D60E4E18989CAF01 /* AppDelegate.swift */,
+				61960A60D60E4E18989CAF02 /* SceneDelegate.swift */,
+				61960A60D60E4E18989CAF03 /* RouterViewController.swift */,
+				61960A60D60E4E18989CAF04 /* WebShell.swift */,
+				61960A60D60E4E18989CAF05 /* JSAPI.swift */,
+				61960A60D60E4E18989CAF06 /* Bridge.swift */,
+				61960A60D60E4E18989CAF07 /* Net.swift */,
+				61960A60D60E4E18989CAF08 /* DownloadManager.swift */,
+				61960A60D60E4E18989CAD43 /* Resources */,
+				61960A60D60E4E18989CAF09 /* Info.plist */,
+			);
+			name = DSFC;
+			sourceTree = "<group>";
+		};
+		61960A60D60E4E18989CAD42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61960A60D60E4E18989CAF20 /* DSFC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61960A60D60E4E18989CAD43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				61960A60D60E4E18989CAF0B /* Assets.xcassets */,
+				61960A60D60E4E18989CAF0A /* www */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61960A60D60E4E18989CAD50 /* DSFC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61960A60D60E4E18989CAD61 /* Build configuration list for PBXNativeTarget "DSFC" */;
+			buildPhases = (
+				61960A60D60E4E18989CAD30 /* Sources */,
+				61960A60D60E4E18989CAD31 /* Frameworks */,
+				61960A60D60E4E18989CAD32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSFC;
+			productName = DSFC;
+			productReference = 61960A60D60E4E18989CAF20 /* DSFC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61960A60D60E4E18989CAD00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					61960A60D60E4E18989CAD50 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 61960A60D60E4E18989CAD60 /* Build configuration list for PBXProject "DSFC" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				"zh-Hans",
+				en,
+				Base,
+			);
+			mainGroup = 61960A60D60E4E18989CAD40;
+			productRefGroup = 61960A60D60E4E18989CAD42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61960A60D60E4E18989CAD50 /* DSFC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61960A60D60E4E18989CAD32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61960A60D60E4E18989CAD0A /* www in Resources */,
+				61960A60D60E4E18989CAD0B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61960A60D60E4E18989CAD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61960A60D60E4E18989CAD01 /* AppDelegate.swift in Sources */,
+				61960A60D60E4E18989CAD02 /* SceneDelegate.swift in Sources */,
+				61960A60D60E4E18989CAD03 /* RouterViewController.swift in Sources */,
+				61960A60D60E4E18989CAD04 /* WebShell.swift in Sources */,
+				61960A60D60E4E18989CAD05 /* JSAPI.swift in Sources */,
+				61960A60D60E4E18989CAD06 /* Bridge.swift in Sources */,
+				61960A60D60E4E18989CAD07 /* Net.swift in Sources */,
+				61960A60D60E4E18989CAD08 /* DownloadManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		61960A60D60E4E18989CAD70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		61960A60D60E4E18989CAD71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61960A60D60E4E18989CAD72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 113;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DSFC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DS-FC";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 15.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cetach.dsfc;
+				PRODUCT_MODULE_NAME = DSFC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61960A60D60E4E18989CAD73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 113;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DSFC/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DS-FC";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIFileSharingEnabled = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 15.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cetach.dsfc;
+				PRODUCT_MODULE_NAME = DSFC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61960A60D60E4E18989CAD60 /* Build configuration list for PBXProject "DSFC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61960A60D60E4E18989CAD70 /* Debug */,
+				61960A60D60E4E18989CAD71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61960A60D60E4E18989CAD61 /* Build configuration list for PBXNativeTarget "DSFC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61960A60D60E4E18989CAD72 /* Debug */,
+				61960A60D60E4E18989CAD73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61960A60D60E4E18989CAD00 /* Project object */;
+}
