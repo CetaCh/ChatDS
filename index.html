@@ -393,6 +393,33 @@ a{color:var(--primary);text-decoration:none;}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
 }
+
+/* ================= 角色卡 ================= */
+.char-card{
+  padding:24px;
+  border-radius:20px;
+  background:var(--card);
+  border:1px solid var(--border-card);
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.char-head{display:flex;gap:16px;align-items:flex-start}
+.char-icon{
+  flex:none;width:46px;height:46px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(77,107,254,.1);color:var(--primary);
+}
+.char-icon svg{width:24px;height:24px}
+.char-title{font-size:16.5px;font-weight:700;margin-bottom:6px}
+.char-desc{font-size:13.5px;line-height:1.75;color:var(--text-2)}
+.char-btn{width:100%;justify-content:center}
+@media(max-width:560px){
+  .char-card{padding:20px}
+  .char-head{gap:12px}
+  .char-icon{width:40px;height:40px;border-radius:11px}
+  .char-icon svg{width:20px;height:20px}
+}
 </style>
 </head>
 <body>
@@ -447,7 +474,7 @@ a{color:var(--primary);text-decoration:none;}
         </svg>
         下载客户端
       </a>
-      <a class="btn ghost" href="#features">了解详情</a>
+      <a class="btn ghost" href="#characters">角色卡</a>
     </div>
     <div class="dl-note" id="dlNote">正在获取下载地址</div>
   </section>
@@ -484,6 +511,31 @@ a{color:var(--primary);text-decoration:none;}
         <h3>轻量流畅</h3>
         <p>原生客户端渲染，启动迅速，流式输出逐字呈现，长对话也保持顺滑。</p>
       </div>
+    </div>
+  </section>
+
+  <!-- 角色卡 -->
+  <section class="section" id="characters">
+    <p class="section-label">角色卡</p>
+    <div class="char-card">
+      <div class="char-head">
+        <div class="char-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="char-title">ChatDS 角色卡</h3>
+          <p class="char-desc">10 个女性向角色，含完整人设、时间线与互动规则。支持一键复制导入码，粘贴到 App 即可开聊。</p>
+        </div>
+      </div>
+      <a class="btn primary char-btn" href="cards.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+        查看角色卡
+      </a>
     </div>
   </section>
 
